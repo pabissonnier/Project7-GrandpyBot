@@ -1,6 +1,78 @@
-/* Main elements of the page */
-body
-{
-    background
+body {
+  padding-top: 10px;
+  padding-left: 10px;
+  passing-right: 10px;
+}
 
+header{
+  background-color: lightyellow;
+}
+
+[class*="col-"] {
+
+  border: 2px;
+  border-radius: 6px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.container-fluid{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.middlebloc{
+    padding-top: 150px;
+    padding-bottom: 200px;
+    padding_left: 40px;
+}
+
+footer{
+  padding-top: 15px;
+  background-color: lightyellow;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left:0;
+}
+
+.name{
+  padding-top: 30px;
+}
+
+.baseline{
+  padding-top: 45px;
+}
+
+.form-group{
+  padding-left: 80px;
+}
+
+.button{
+  padding-top: 10px;
 }
