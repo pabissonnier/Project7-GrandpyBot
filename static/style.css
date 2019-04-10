@@ -46,9 +46,15 @@ header{
   }
 }
 
-.middlebloc{
+.question_bloc{
     padding-top: 150px;
     padding-bottom: 200px;
+    padding_left: 40px;
+}
+
+.show_result{
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding_left: 40px;
 }
 
