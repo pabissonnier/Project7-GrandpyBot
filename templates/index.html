@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="..\static\images\favicon.ico" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="../static/style.css" rel="stylesheet">
 
-    <!-- Get the text from the form and display them-->
+    <!-- Get the text from the form and display it-->
     <script language="JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(function() {
@@ -16,6 +17,48 @@
                     question: $('input[name="quest"]').val(),
                 }, function(data) {
                     $("#result").text(data.result);
+                });
+                return false;
+            });
+         });
+    </script>
+
+    <!-- Get the text from the form for address display-->
+    <script type="text/javascript">
+        $(function() {
+            $('a#validation').bind('click', function(data) {
+                $.getJSON('_address', {
+                    question: $('input[name="quest"]').val(),
+                }, function(data) {
+                    $("#address").text(data.result);
+                });
+                return false;
+            });
+         });
+    </script>
+
+    <!-- Get the text from the form for map display-->
+    <script type="text/javascript">
+        $(function() {
+            $('a#validation').bind('click', function(data) {
+                $.getJSON('_map', {
+                    question: $('input[name="quest"]').val(),
+                }, function(data) {
+                    $("#map").attr("src", data.result);
+                });
+                return false;
+            });
+         });
+    </script>
+
+    <!-- Get the text from the form for wiki display-->
+    <script type="text/javascript">
+        $(function() {
+            $('a#validation').bind('click', function(data) {
+                $.getJSON('_wiki', {
+                    question: $('input[name="quest"]').val(),
+                }, function(data) {
+                    $("#wiki").text(data.result);
                 });
                 return false;
             });
@@ -62,7 +105,7 @@
     <div class="middlebloc">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-5">
                     <div class="question_bloc">
                         <h2> Pose ta question mon petit !</h2>
                         <form id="my_form" name="my_form">
@@ -72,12 +115,11 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-7" id="answer_bloc">
                     <div class="row">
                         <div class="col-lg-6"></div>
                         <div class="col-lg-6">
                             <p>
-                                <h3> Ta question est :</h3>
                                 <h6><span id="result"></span></h6>
                             </p>
                         </div>
@@ -85,8 +127,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <p>
-                                <h3> Réponse 1 :</h3>
-                                <h6><span id="map"></span></h6>
+                                <h6><span id="address"></span></h6>
                             </p>
                         </div>
                         <div class="col-lg-6"></div>
@@ -94,7 +135,14 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <p>
-                                <h3> Réponse 2 :</h3>
+                                <img src="" id="map">
+                            </p>
+                        </div>
+                        <div class="col-lg-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>
                                 <h6><span id="wiki"></span></h6>
                             </p>
                         </div>
