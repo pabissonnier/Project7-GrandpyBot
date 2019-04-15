@@ -1,11 +1,5 @@
-body {
-  padding-top: 10px;
-  padding-left: 10px;
-  passing-right: 10px;
-}
-
 header{
-  background-color: lightyellow;
+  background-image: url(images/wallpaper.jpg);
 }
 
 [class*="col-"] {
@@ -46,6 +40,18 @@ header{
   }
 }
 
+#text_form{
+    font-family : "DoctorJekyllNF"
+    src: url("/font/DoctorJekyllNF.otf" format("oft"),url("/font/DoctorJekyllNF.ttf" format("ttf");
+
+}
+
+
+#quest{
+    width: 50%;
+
+}
+
 .question_bloc{
     padding-top: 150px;
     padding_left: 40px;
@@ -54,11 +60,12 @@ header{
 
 footer{
   padding-top: 15px;
-  background-color: lightyellow;
+  background-color: #556451;
   position: fixed;
   bottom: 0;
   right: 0;
   left:0;
+  color : white;
 }
 
 .name{
@@ -176,5 +183,38 @@ footer{
 
 
 #mapbox:empty{
+    display: none;
+}
+
+#wiki{
+  background: #e1ffc7;
+  border-radius: 0px 5px 5px 5px;
+  float: left;
+  color: #000;
+  clear: both;
+  line-height: 18px;
+  font-size: 15px;
+  padding: 8px;
+  position: relative;
+  margin: 8px 0;
+  max-width: 85%;
+  word-wrap: break-word;
+  z-index: -1;
+}
+
+#wiki:after{
+  border-width: 0px 10px 10px 0;
+  border-color: transparent transparent transparent #e1ffc7;
+  top: 0;
+  left: -10px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+
+#wiki:empty{
     display: none;
 }
