@@ -80,8 +80,10 @@ def map():
 @app.route('/_wiki')
 def wiki():
     filtered_sentence = get_main_words()
+    words_list = filtered_sentence.split('+')
+    first_word = words_list[0]
     wikipedia.set_lang('fr')
-    sentences_wiki = wikipedia.summary(filtered_sentence, sentences=2)
+    sentences_wiki = wikipedia.summary(first_word, sentences=2)
     return jsonify(result=sentences_wiki)
 
 

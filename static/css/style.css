@@ -1,5 +1,5 @@
 header{
-  background-image: url(images/wallpaper.jpg);
+  background-image: url(../images/wallpaper.jpg);
 }
 
 [class*="col-"] {
@@ -16,10 +16,10 @@ header{
 }
 
 .container-fluid{
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-left: auto;
-    margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
  }
 
 @media (min-width: 768px) {
@@ -41,20 +41,20 @@ header{
 }
 
 #text_form{
-    font-family : "DoctorJekyllNF"
-    src: url("/font/DoctorJekyllNF.otf" format("oft"),url("/font/DoctorJekyllNF.ttf" format("ttf");
+  font-family : "DoctorJekyllNF"
+  src: url("/font/DoctorJekyllNF.otf" format("oft"),url("/font/DoctorJekyllNF.ttf" format("ttf");
 
 }
 
 
 #quest{
-    width: 50%;
+  width: 50%;
 
 }
 
 .question_bloc{
-    padding-top: 150px;
-    padding_left: 40px;
+  padding-top: 150px;
+  padding_left: 40px;
 }
 
 
@@ -115,7 +115,7 @@ footer{
 
 
 #result:empty{
-    display: none;
+  display: none;
 }
 
 #address{
@@ -149,7 +149,7 @@ footer{
 
 
 #address:empty{
-    display: none;
+  display: none;
 }
 
 
@@ -183,7 +183,7 @@ footer{
 
 
 #mapbox:empty{
-    display: none;
+  display: none;
 }
 
 #wiki{
@@ -216,5 +216,5 @@ footer{
 
 
 #wiki:empty{
-    display: none;
+  display: none;
 }
