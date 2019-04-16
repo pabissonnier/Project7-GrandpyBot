@@ -10,8 +10,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '7TKUKe09wW1PlrtSL066lsN18uWA7iuO'
 
 
-def get_main_words():
-    question = request.args.get('question', 0, type=str)
+def get_main_words(question):
     question = question.lower()
 
     word_tokens = question.split()
@@ -45,7 +44,8 @@ def answer():
 
 @app.route('/_address')
 def address():
-    filtered_sentence = get_main_words()
+    question = request.args.get('question', 0, type=str)
+    filtered_sentence = get_main_words(question)
 
     url_googleaddress = "https://maps.googleapis.com/maps/api/place/textsearch/json?" \
                     "query={0}&key=AIzaSyA1C5CCM7bcXC-Tg8U-az-vmRlRwymj3b0".format(filtered_sentence)
@@ -61,7 +61,8 @@ def address():
 
 @app.route('/_map')
 def map():
-    filtered_sentence = get_main_words()
+    question = request.args.get('question', 0, type=str)
+    filtered_sentence = get_main_words(question)
 
     url_googleaddress = "https://maps.googleapis.com/maps/api/place/textsearch/json?" \
                     "query={0}&key=AIzaSyA1C5CCM7bcXC-Tg8U-az-vmRlRwymj3b0".format(filtered_sentence)
@@ -83,7 +84,8 @@ def map():
 
 @app.route('/_wiki')
 def wiki():
-    filtered_sentence = get_main_words()
+    question = request.args.get('question', 0, type=str)
+    filtered_sentence = get_main_words(question)
     words_list = filtered_sentence.split('+')
     first_word = words_list[0]
     wikipedia.set_lang('fr')

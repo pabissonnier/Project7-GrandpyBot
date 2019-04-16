@@ -8,6 +8,7 @@ header{
   background-image: url(../images/wallpaper.jpg);
   height: 160px;
   padding-top: 10px;
+  box-shadow: 0px 1px 5px #516B52;
 }
 
 [class*="col-"] {
@@ -60,16 +61,17 @@ h2{
 }
 
 #quest{
-  width: 50%;
+  width: 60%;
   padding-left : 20px;
   border-radius : 14px;
   border: 2px solid #556451;
+  margin-right: 10px;
 }
 
 #button_valid{
   width: 15%;
   background-color: #E1E1C7;
-  border-radius : 20px;
+  border-radius : 50px;
   border: 3px solid #556451;
   color : black;
   padding-bottom: 5px;
@@ -78,7 +80,6 @@ h2{
 
 #button_valid:hover{
   background-color: #556451;
-  padding-left : 5px;
   border-radius : 20px;
   border: 3px solid #E1E1C7;
   color : white;
@@ -125,7 +126,7 @@ h2{
   max-width: 85%;
   word-wrap: break-word;
   z-index: -1;
-  box-shadow: -2px 2px 12px #516B52;
+  box-shadow: -1px 1px 5px #516B52;
 }
 
 #result:after{
@@ -160,7 +161,7 @@ h2{
   max-width: 85%;
   word-wrap: break-word;
   z-index: -1;
-  box-shadow: 2px 2px 12px #516B52;
+  box-shadow: 1px 1px 5px #516B52;
 }
 
 #address:after{
@@ -195,7 +196,7 @@ h2{
   max-width: 85%;
   word-wrap: break-word;
   z-index: -1;
-  box-shadow: -2px 2px 12px #516B52;
+  box-shadow: 1px 1px 5px #516B52;
 
 }
 
