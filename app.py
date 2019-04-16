@@ -2,6 +2,8 @@ from flask import Flask, render_template, request, jsonify
 import json
 import urllib.request
 import wikipedia
+import sentences_list
+import random
 app = Flask(__name__)
 
 
@@ -52,7 +54,9 @@ def address():
 
     for items in googleapi_data["results"]:
         address_location = items["formatted_address"]
-        return jsonify(result=address_location)
+        random_sentence = random.choice(sentences_list.sentences)
+        address_sentence = random_sentence+address_location
+        return jsonify(result=address_sentence)
 
 
 @app.route('/_map')
