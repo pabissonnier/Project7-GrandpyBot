@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2f374dd2-fef3-40a2-96a3-7a053da395f2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentences_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/sentences_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +52,7 @@
           <entry key="html" value="5352" />
           <entry key="js" value="907" />
           <entry key="json" value="317" />
-          <entry key="py" value="8571" />
+          <entry key="py" value="8863" />
           <entry key="txt" value="29" />
         </counts>
       </usages-collector>
@@ -66,7 +63,7 @@
           <entry key="JSON" value="317" />
           <entry key="JavaScript" value="907" />
           <entry key="PLAIN_TEXT" value="36" />
-          <entry key="Python" value="8571" />
+          <entry key="Python" value="8863" />
         </counts>
       </usages-collector>
     </session>
@@ -76,27 +73,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-868">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="-306">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
-                <marker date="1555421100281" expanded="true" signature="640:839" ph="..." />
-                <marker date="1555421100281" expanded="true" signature="1778:3281" ph="..." />
-                <marker date="1555421100281" expanded="true" signature="3280:3281" ph="..." />
+                <marker date="1555504927533" expanded="true" signature="232:234" ph="..." />
+                <marker date="1555504927533" expanded="true" signature="640:839" ph="..." />
+                <marker date="1555504927533" expanded="true" signature="1778:3281" ph="..." />
+                <marker date="1555504927533" expanded="true" signature="3280:3281" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/test_app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="338">
+              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1555418513172" expanded="true" signature="536:537" ph="..." />
-                <marker date="1555418513172" expanded="true" signature="536:541" ph="..." />
+                <marker date="1555505089819" expanded="true" signature="509:510" ph="..." />
+                <marker date="1555505089819" expanded="true" signature="509:514" ph="..." />
+                <marker date="1555505089819" expanded="true" signature="626:631" ph="..." />
               </folding>
             </state>
           </provider>
@@ -111,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
+            <state relative-caret-position="108">
               <caret line="102" column="1" lean-forward="true" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
             </state>
           </provider>
@@ -202,11 +201,11 @@
         <option value="$PROJECT_DIR$/stopwords.json" />
         <option value="$PROJECT_DIR$/tests/stopwords.json" />
         <option value="$PROJECT_DIR$/tests/googleapi_data.json" />
-        <option value="$PROJECT_DIR$/tests/test_app.py" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/sentences_list.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
+        <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/tests/test_app.py" />
       </list>
     </option>
   </component>
@@ -395,8 +394,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.app" />
         <item itemvalue="Python tests.pytest for test_app.test_get_main_words" />
+        <item itemvalue="Python.app" />
         <item itemvalue="Python.datas_management" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python tests.pytest in C:/Users/pabis/OneDrive/Desktop/OC/Projets/7- GrandpyBot/tests/test_main.py" />
@@ -407,9 +406,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_for_test_app_test_get_main_words - 2019.04.16 at 10h 11m 55s.xml">
-      <configuration name="pytest for test_app.test_get_main_words" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_for_test_app_test_get_main_words - 2019.04.16 at 10h 12m 29s.xml">
       <configuration name="pytest for test_app.test_get_main_words" configurationId="tests" />
     </history-entry>
@@ -437,16 +433,19 @@
     <history-entry file="pytest_for_test_app_test_get_main_words - 2019.04.16 at 14h 41m 27s.xml">
       <configuration name="pytest for test_app.test_get_main_words" configurationId="tests" />
     </history-entry>
+    <history-entry file="pytest_for_test_app_test_get_main_words - 2019.04.17 at 14h 44m 30s.xml">
+      <configuration name="pytest for test_app.test_get_main_words" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32911393" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3322785" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3322785" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -528,35 +527,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_app.py">
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1555418513172" expanded="true" signature="536:537" ph="..." />
-            <marker date="1555418513172" expanded="true" signature="536:541" ph="..." />
-          </folding>
+        <state relative-caret-position="108">
+          <caret line="102" column="1" lean-forward="true" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-868">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="-306">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
-            <marker date="1555421100281" expanded="true" signature="640:839" ph="..." />
-            <marker date="1555421100281" expanded="true" signature="1778:3281" ph="..." />
-            <marker date="1555421100281" expanded="true" signature="3280:3281" ph="..." />
+            <marker date="1555504927533" expanded="true" signature="232:234" ph="..." />
+            <marker date="1555504927533" expanded="true" signature="640:839" ph="..." />
+            <marker date="1555504927533" expanded="true" signature="1778:3281" ph="..." />
+            <marker date="1555504927533" expanded="true" signature="3280:3281" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+    <entry file="file://$PROJECT_DIR$/tests/test_app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="102" column="1" lean-forward="true" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
+        <state relative-caret-position="338">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1555505089819" expanded="true" signature="509:510" ph="..." />
+            <marker date="1555505089819" expanded="true" signature="509:514" ph="..." />
+            <marker date="1555505089819" expanded="true" signature="626:631" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
