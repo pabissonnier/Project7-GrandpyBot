@@ -50,17 +50,12 @@ def address():
     url_googleaddress = "https://maps.googleapis.com/maps/api/place/textsearch/json?" \
                     "query={0}&key=AIzaSyA1C5CCM7bcXC-Tg8U-az-vmRlRwymj3b0".format(filtered_sentence)
 
-    try:
-        googleapi_data = get_googleapi_data(url_googleaddress)
-        assert googleapi_data is True
-
-        for items in googleapi_data["results"]:
-            address_location = items["formatted_address"]
-            random_sentence = random.choice(sentences_list.sentences)
-            address_sentence = random_sentence+address_location
-            return jsonify(result=address_sentence)
-    except AssertionError:
-            return jsonify(result="Oops, je ne trouve pas l'adresse... Essaie autre chose :)")
+    googleapi_data = get_googleapi_data(url_googleaddress)
+    for items in googleapi_data["results"]:
+        address_location = items["formatted_address"]
+        random_sentence = random.choice(sentences_list.sentences)
+        address_sentence = random_sentence+address_location
+        return jsonify(result=address_sentence)
 
 
 @app.route('/_map')
@@ -81,7 +76,7 @@ def map():
                         "&size=400x300&maptype=roadmap" \
                         "&key=AIzaSyA1C5CCM7bcXC-Tg8U-az-vmRlRwymj3b0" \
                         "&format=png&visual_refresh=true" \
-                        "&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C3{1},{2}".format(filtered_sentence, lat, lng)
+                        "&markers=color:red%7C{1},{2}".format(filtered_sentence, lat, lng)
 
         return jsonify(result=url_googlemap)
 
@@ -93,20 +88,13 @@ def wiki():
     words_list = filtered_sentence.split('+')
     first_word = words_list[0]
     wikipedia.set_lang('fr')
-    try:
-        sentence_wiki = wikipedia.summary(first_word, sentences=1)
-        link_wiki_api = wikipedia.page(first_word).url
-        assert wikipedia.page is True
-        link_wiki = """
-        <html><head></head><body><a href={0}>Si tu veux en savoir plus</a></body></html>""".format(link_wiki_api)
-        result_wiki = sentence_wiki+link_wiki
-        return jsonify(result=result_wiki)
-    except IndexError:
-        return jsonify(result="Je me suis emmelé les pinceaux...Essaye avec une autre orthographe")
-    except TypeError:
-        return jsonify(result="Je me suis emmelé les pinceaux...Essaye avec une autre orthographe")
-    except AssertionError:
-        return jsonify(result="Je me suis emmelé les pinceaux...Essaye avec une autre orthographe")
+
+    sentence_wiki = wikipedia.summary(first_word, sentences=1)
+    link_wiki_api = wikipedia.page(first_word).url
+    link_wiki = """
+    <html><head></head><body><a href={0}>Si tu veux en savoir plus</a></body></html>""".format(link_wiki_api)
+    result_wiki = sentence_wiki+link_wiki
+    return jsonify(result=result_wiki)
 
 
 if __name__ == '__main__':
