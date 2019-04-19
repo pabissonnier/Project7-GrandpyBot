@@ -31,6 +31,24 @@ def get_googleapi_data(url_googleaddress):
     return googleapi_data
 
 
+def get_address(googleapi_data):
+    for items in googleapi_data["results"]:
+        address_location = items["formatted_address"]
+        return address_location
+
+
+def get_lat(googleapi_data):
+    for items in googleapi_data["results"]:
+        lat = items["geometry"]["location"]["lat"]
+        return lat
+
+
+def get_lng(googleapi_data):
+    for items in googleapi_data["results"]:
+        lng = items["geometry"]["location"]["lng"]
+        return lng
+
+
 @app.route('/')
 def home():
     return render_template('index.html', title="Bienvenue chez GrandPy Bot")
@@ -51,11 +69,10 @@ def address():
                     "query={0}&key=AIzaSyA1C5CCM7bcXC-Tg8U-az-vmRlRwymj3b0".format(filtered_sentence)
 
     googleapi_data = get_googleapi_data(url_googleaddress)
-    for items in googleapi_data["results"]:
-        address_location = items["formatted_address"]
-        random_sentence = random.choice(sentences_list.sentences)
-        address_sentence = random_sentence+address_location
-        return jsonify(result=address_sentence)
+    address_location = get_address(googleapi_data)
+    random_sentence = random.choice(sentences_list.sentences)
+    address_sentence = random_sentence+address_location
+    return jsonify(result=address_sentence)
 
 
 @app.route('/_map')
@@ -68,17 +85,16 @@ def map():
 
     googleapi_data = get_googleapi_data(url_googleaddress)
 
-    for items in googleapi_data["results"]:
-        lat = items["geometry"]["location"]["lat"]
-        lng = items["geometry"]["location"]["lng"]
+    lat = get_lat(googleapi_data)
+    lng = get_lng(googleapi_data)
 
-        url_googlemap = "https://maps.googleapis.com/maps/api/staticmap?center={0}&zoom=13" \
-                        "&size=400x300&maptype=roadmap" \
-                        "&key=AIzaSyA1C5CCM7bcXC-Tg8U-az-vmRlRwymj3b0" \
-                        "&format=png&visual_refresh=true" \
-                        "&markers=color:red%7C{1},{2}".format(filtered_sentence, lat, lng)
+    url_googlemap = "https://maps.googleapis.com/maps/api/staticmap?center={0}&zoom=13" \
+                    "&size=400x300&maptype=roadmap" \
+                    "&key=AIzaSyA1C5CCM7bcXC-Tg8U-az-vmRlRwymj3b0" \
+                    "&format=png&visual_refresh=true" \
+                    "&markers=color:red%7C{1},{2}".format(filtered_sentence, lat, lng)
 
-        return jsonify(result=url_googlemap)
+    return jsonify(result=url_googlemap)
 
 
 @app.route('/_wiki')
@@ -87,8 +103,8 @@ def wiki():
     filtered_sentence = get_main_words(question)
     words_list = filtered_sentence.split('+')
     first_word = words_list[0]
-    wikipedia.set_lang('fr')
 
+    wikipedia.set_lang('fr')
     sentence_wiki = wikipedia.summary(first_word, sentences=1)
     link_wiki_api = wikipedia.page(first_word).url
     link_wiki = """
