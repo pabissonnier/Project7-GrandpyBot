@@ -70,7 +70,7 @@ def address():
 
     googleapi_data = get_googleapi_data(url_googleaddress)
     address_location = get_address(googleapi_data)
-    random_sentence = random.choice(sentences_list.sentences)
+    random_sentence = random.choice(sentences_list.sentences_address)
     address_sentence = random_sentence+address_location
     return jsonify(result=address_sentence)
 
@@ -106,10 +106,10 @@ def wiki():
 
     wikipedia.set_lang('fr')
     sentence_wiki = wikipedia.summary(first_word, sentences=1)
+    random_sentence = random.choice(sentences_list.sentences_wiki)
     link_wiki_api = wikipedia.page(first_word).url
-    link_wiki = """
-    <html><head></head><body><a href={0}>Si tu veux en savoir plus</a></body></html>""".format(link_wiki_api)
-    result_wiki = sentence_wiki+link_wiki
+    link_wiki = """<a href={0}>Si tu veux en savoir plus</a>""".format(link_wiki_api)
+    result_wiki = random_sentence+sentence_wiki+link_wiki
     return jsonify(result=result_wiki)
 
 
