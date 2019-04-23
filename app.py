@@ -1,52 +1,17 @@
 from flask import Flask, render_template, request, jsonify
-import json
-import urllib.request
-import wikipedia
+
 import sentences_list
 import random
+from extraction import Extraction
+from parssing import Parssing
 app = Flask(__name__)
 
 
 app.config['SECRET_KEY'] = '7TKUKe09wW1PlrtSL066lsN18uWA7iuO'
 
-
-def get_main_words(question):
-    question = question.lower()
-
-    word_tokens = question.split()
-
-    with open('stopwords.json', encoding='utf-8') as json_file:
-        stopwords = json.load(json_file)
-
-        filtered_list = [w for w in word_tokens if not w in stopwords]
-
-        filtered_sentence = '+'.join(filtered_list)
-        return filtered_sentence
-
-
-def get_googleapi_data(url_googleaddress):
-    googleapi_json = urllib.request.urlopen(url_googleaddress)
-    googleapi_read = googleapi_json.read()
-    googleapi_data = json.loads(googleapi_read.decode("utf-8"))
-    return googleapi_data
-
-
-def get_address(googleapi_data):
-    for items in googleapi_data["results"]:
-        address_location = items["formatted_address"]
-        return address_location
-
-
-def get_lat(googleapi_data):
-    for items in googleapi_data["results"]:
-        lat = items["geometry"]["location"]["lat"]
-        return lat
-
-
-def get_lng(googleapi_data):
-    for items in googleapi_data["results"]:
-        lng = items["geometry"]["location"]["lng"]
-        return lng
+# Instances creation
+datas_extraction = Extraction()
+datas_management = Parssing()
 
 
 @app.route('/')
@@ -63,13 +28,10 @@ def answer():
 @app.route('/_address')
 def address():
     question = request.args.get('question', 0, type=str)
-    filtered_sentence = get_main_words(question)
-
-    url_googleaddress = "https://maps.googleapis.com/maps/api/place/textsearch/json?" \
-                    "query={0}&key=AIzaSyA1C5CCM7bcXC-Tg8U-az-vmRlRwymj3b0".format(filtered_sentence)
-
-    googleapi_data = get_googleapi_data(url_googleaddress)
-    address_location = get_address(googleapi_data)
+    filtered_sentence = Parssing.get_main_words(datas_management, question)
+    url_googleaddress = Extraction.get_urladdress(datas_extraction, filtered_sentence)
+    googleapi_data = Extraction.get_googleapi_data(datas_extraction, url_googleaddress)
+    address_location = Extraction.get_address(datas_extraction, googleapi_data)
     random_sentence = random.choice(sentences_list.sentences_address)
     address_sentence = random_sentence+address_location
     return jsonify(result=address_sentence)
@@ -78,37 +40,23 @@ def address():
 @app.route('/_map')
 def map():
     question = request.args.get('question', 0, type=str)
-    filtered_sentence = get_main_words(question)
-
-    url_googleaddress = "https://maps.googleapis.com/maps/api/place/textsearch/json?" \
-                    "query={0}&key=AIzaSyA1C5CCM7bcXC-Tg8U-az-vmRlRwymj3b0".format(filtered_sentence)
-
-    googleapi_data = get_googleapi_data(url_googleaddress)
-
-    lat = get_lat(googleapi_data)
-    lng = get_lng(googleapi_data)
-
-    url_googlemap = "https://maps.googleapis.com/maps/api/staticmap?center={0}&zoom=13" \
-                    "&size=400x300&maptype=roadmap" \
-                    "&key=AIzaSyA1C5CCM7bcXC-Tg8U-az-vmRlRwymj3b0" \
-                    "&format=png&visual_refresh=true" \
-                    "&markers=color:red%7C{1},{2}".format(filtered_sentence, lat, lng)
-
+    filtered_sentence = Parssing.get_main_words(datas_management, question)
+    url_googleaddress = Extraction.get_urladdress(datas_extraction, filtered_sentence)
+    googleapi_data = Extraction.get_googleapi_data(datas_extraction, url_googleaddress)
+    lat = Extraction.get_lat(datas_extraction, googleapi_data)
+    lng = Extraction.get_lng(datas_extraction, googleapi_data)
+    url_googlemap = Extraction.get_urlmap(datas_extraction, filtered_sentence, lat, lng)
     return jsonify(result=url_googlemap)
 
 
 @app.route('/_wiki')
 def wiki():
     question = request.args.get('question', 0, type=str)
-    filtered_sentence = get_main_words(question)
-    words_list = filtered_sentence.split('+')
-    first_word = words_list[0]
-
-    wikipedia.set_lang('fr')
-    sentence_wiki = wikipedia.summary(first_word, sentences=1)
+    filtered_sentence = Parssing.get_main_words(datas_management, question)
+    first_word = Parssing.wiki_firstword(datas_management, filtered_sentence)
+    sentence_wiki = Extraction.wiki_datas(datas_extraction, first_word)
+    link_wiki = Extraction.wiki_link(datas_extraction, first_word)
     random_sentence = random.choice(sentences_list.sentences_wiki)
-    link_wiki_api = wikipedia.page(first_word).url
-    link_wiki = """<a href={0}>Si tu veux en savoir plus</a>""".format(link_wiki_api)
     result_wiki = random_sentence+sentence_wiki+link_wiki
     return jsonify(result=result_wiki)
 
