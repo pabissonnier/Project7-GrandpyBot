@@ -52,6 +52,6 @@ class Extraction:
 
     def wiki_link(self, first_word):
         link_wiki_api = wikipedia.page(first_word).url
-        link_wiki = """<a href='{0}'>Si tu veux en savoir plus</a>""".format(link_wiki_api)
-        return link_wiki
+        """link_wiki = "<a href='{0}'>Si tu veux en savoir plus</a>".format(link_wiki_api)"""
+        return link_wiki_api
 

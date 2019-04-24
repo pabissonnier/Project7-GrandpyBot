@@ -63,10 +63,23 @@ def wiki():
     first_word = Parssing.wiki_firstword(datas_management, filtered_sentence)
     try:
         sentence_wiki = Extraction.wiki_datas(datas_extraction, first_word)
-        link_wiki = Extraction.wiki_link(datas_extraction, first_word)
         random_sentence = random.choice(sentences_list.sentences_wiki)
-        result_wiki = random_sentence+sentence_wiki+link_wiki
+        result_wiki = random_sentence+sentence_wiki
         return jsonify(result=result_wiki)
+    except wikipedia.exceptions.DisambiguationError:
+        return jsonify(result="Je peux trouver des infos mais il y a beaucoup de choses avec le même nom, peux-tu préciser s'il te plait ?")
+    except wikipedia.exceptions.PageError:
+        return jsonify(result="Hum, ça ne me dit vraiment rien...")
+
+
+@app.route('/_wikilink')
+def wikilink():
+    question = request.args.get('question', 0, type=str)
+    filtered_sentence = Parssing.get_main_words(datas_management, question)
+    first_word = Parssing.wiki_firstword(datas_management, filtered_sentence)
+    try:
+        link_wiki = Extraction.wiki_link(datas_extraction, first_word)
+        return jsonify(result=link_wiki)
     except wikipedia.exceptions.DisambiguationError:
         return jsonify(result="Je peux trouver des infos mais il y a beaucoup de choses avec le même nom, peux-tu préciser s'il te plait ?")
     except wikipedia.exceptions.PageError:

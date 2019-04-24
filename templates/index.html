@@ -77,6 +77,34 @@
          });
     </script>
 
+    <!-- Get the text from the form for wiki link text-->
+    <script type="text/javascript">
+        $(function() {
+            $('a#validation').bind('click', function(data) {
+                $.getJSON('_wikilink', {
+                    question: $('input[name="quest"]').val(),
+                }, function(data) {
+                    $("#wikilink").text("Tu veux en savoir plus?");
+                });
+                return false;
+            });
+         });
+    </script>
+
+    <!-- Get the text from the form for wiki link-->
+    <script type="text/javascript">
+        $(function() {
+            $('a#validation').bind('click', function(data) {
+                $.getJSON('_wikilink', {
+                    question: $('input[name="quest"]').val(),
+                }, function(data) {
+                    $("#wikilink").attr("href", data.result);
+                });
+                return false;
+            });
+         });
+    </script>
+
     <title>GrandPy Bot</title>
 
 </head>
@@ -128,6 +156,12 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <h6><span id="wiki"></span></h6>
+                        </div>
+                        <div class="col-lg-6"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h6><a href="" id="wikilink"></a></h6>
                         </div>
                         <div class="col-lg-6"></div>
                     </div>

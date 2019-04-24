@@ -223,6 +223,40 @@ h2{
   display: none;
 }
 
+#wikilink{
+  background: #E1E1C7;
+  border-radius: 0px 5px 5px 5px;
+  float: left;
+  color: #000;
+  clear: both;
+  line-height: 18px;
+  font-size: 15px;
+  padding: 8px;
+  position: relative;
+  margin: 8px 0;
+  max-width: 85%;
+  word-wrap: break-word;
+  z-index: -1;
+  box-shadow: 1px 1px 5px #516B52;
+
+}
+
+#wikilink:after{
+  border-width: 0px 10px 10px 0;
+  border-color: transparent #E1E1C7 transparent transparent;
+  top: 0;
+  left: -10px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+
+#wikilink:empty{
+  display: none;
+}
 
 footer{
   padding-top: 15px;
