@@ -54,3 +54,4 @@ class Extraction:
         link_wiki_api = wikipedia.page(first_word).url
         link_wiki = """<a href='{0}'>Si tu veux en savoir plus</a>""".format(link_wiki_api)
         return link_wiki
+

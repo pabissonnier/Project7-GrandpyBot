@@ -22,16 +22,17 @@
                 return false;
             });
          });
-
-
-
     </script>
 
     <!-- Reset form when submit-->
     <script type="text/javascript">
-        $('#button_valid').click(function(){
-                $('#quest')[0].reset();
+        $(function() {
+            $('a#validation').bind('click', function(data) {
+                $('#address').reset();
+                });
+                return false;
             });
+         });
     </script>
 
     <!-- Get the text from the form for address display-->
