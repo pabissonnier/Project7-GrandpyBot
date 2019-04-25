@@ -24,17 +24,6 @@
          });
     </script>
 
-    <!-- Reset form when submit-->
-    <script type="text/javascript">
-        $(function() {
-            $('a#validation').bind('click', function(data) {
-                $('#address').reset();
-                });
-                return false;
-            });
-         });
-    </script>
-
     <!-- Get the text from the form for address display-->
     <script type="text/javascript">
         $(function() {
@@ -84,21 +73,8 @@
                 $.getJSON('_wikilink', {
                     question: $('input[name="quest"]').val(),
                 }, function(data) {
-                    $("#wikilink").text("Tu veux en savoir plus?");
-                });
-                return false;
-            });
-         });
-    </script>
-
-    <!-- Get the text from the form for wiki link-->
-    <script type="text/javascript">
-        $(function() {
-            $('a#validation').bind('click', function(data) {
-                $.getJSON('_wikilink', {
-                    question: $('input[name="quest"]').val(),
-                }, function(data) {
-                    $("#wikilink").attr("href", data.result);
+                    var link = data.result,
+                    $("#wikilink").append("<a href=link>Tu veux en savoir plus?</a>");
                 });
                 return false;
             });
@@ -114,7 +90,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3">
-                    <img src="..\static\images\logo.png" alt="Logo de GrandPy Bot">
+                    <img src="..\static\images\logo.png" id="logo" alt="Logo de GrandPy Bot">
                 </div>
                 <div class="col-lg-9"></div>
             </div>
@@ -161,7 +137,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
-                            <h6><a href="" id="wikilink"></a></h6>
+                            <h6><span id="wikilink"></span></h6>
                         </div>
                         <div class="col-lg-6"></div>
                     </div>

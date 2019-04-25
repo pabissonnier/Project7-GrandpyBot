@@ -81,7 +81,7 @@ def wikilink():
         link_wiki = Extraction.wiki_link(datas_extraction, first_word)
         return jsonify(result=link_wiki)
     except wikipedia.exceptions.DisambiguationError:
-        return jsonify(result="Je peux trouver des infos mais il y a beaucoup de choses avec le même nom, peux-tu préciser s'il te plait ?")
+        pass
     except wikipedia.exceptions.PageError:
         return jsonify(result="Hum, ça ne me dit vraiment rien...")
 
