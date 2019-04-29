@@ -55,6 +55,11 @@ header{
   }
 }
 
+a{
+    pointer-events: auto;
+    cursor: pointer;
+}
+
 .middlebloc{
   padding-right: 100px;
   padding-left: 20px;
@@ -232,7 +237,6 @@ h2{
   line-height: 18px;
   font-size: 15px;
   padding: 8px;
-  position: relative;
   margin: 8px 0;
   max-width: 85%;
   word-wrap: break-word;
@@ -243,7 +247,7 @@ h2{
 #wikilink:after{
   border-width: 0px 10px 10px 0;
   border-color: transparent #E1E1C7 transparent transparent;
-  top: 0;
+  top: 5px;
   left: -10px;
   position: absolute;
   content: "";

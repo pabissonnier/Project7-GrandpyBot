@@ -52,7 +52,7 @@ class Extraction:
 
     def wiki_link(self, first_word):
         wikipedia.set_lang('fr')
-        link_wiki = wikipedia.page(first_word).url
-        """link_wiki = "<a href='{0}'>Si tu veux en savoir plus</a>".format(link_wiki_api)"""
+        link_wiki_api = wikipedia.page(first_word).url
+        link_wiki = """<a href='{0}' target='_blank'>Si tu veux en savoir plus</a>""".format(link_wiki_api)
         return link_wiki
 

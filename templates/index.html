@@ -73,8 +73,7 @@
                 $.getJSON('_wikilink', {
                     question: $('input[name="quest"]').val(),
                 }, function(data) {
-                    var link = data.result,
-                    $("#wikilink").append("<a href=link>Tu veux en savoir plus?</a>");
+                    $("#wikilink").html(data.result);
                 });
                 return false;
             });

@@ -83,7 +83,7 @@ def wikilink():
     except wikipedia.exceptions.DisambiguationError:
         pass
     except wikipedia.exceptions.PageError:
-        return jsonify(result="Hum, ça ne me dit vraiment rien...")
+        pass
 
 
 if __name__ == '__main__':
