@@ -6,8 +6,8 @@
 
 header{
   background-image: url(../images/wallpaper.jpg);
-  height: 160px;
-  padding-top: 10px;
+  height: 130px;
+  padding-top: 5px;
   box-shadow: 0px 1px 5px #516B52;
   position: static;
 }
@@ -67,7 +67,7 @@ a{
   scroll-behaviour : auto;
 }
 
-h2{
+h3{
   font-family : "Doctor Jekyll NF";
   padding-bottom : 15px;
 }
