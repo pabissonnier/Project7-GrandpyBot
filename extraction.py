@@ -25,32 +25,38 @@ class Extraction:
         return url_googlemap
 
     def get_googleapi_data(self, url_googleaddress):
+        """ Get json from url """
         googleapi_json = urllib.request.urlopen(url_googleaddress)
         googleapi_read = googleapi_json.read()
         googleapi_data = json.loads(googleapi_read.decode("utf-8"))
         return googleapi_data
 
     def get_address(self, googleapi_data):
+        """ Get address from json"""
         for items in googleapi_data["results"]:
             address_location = items["formatted_address"]
             return address_location
 
     def get_lat(self, googleapi_data):
+        """ Get latitude from json"""
         for items in googleapi_data["results"]:
             lat = items["geometry"]["location"]["lat"]
             return lat
 
     def get_lng(self, googleapi_data):
+        """ Get longitude from json"""
         for items in googleapi_data["results"]:
             lng = items["geometry"]["location"]["lng"]
             return lng
 
     def wiki_datas(self, first_word):
+        """ Get first sentence from wikipedia"""
         wikipedia.set_lang('fr')
         sentence_wiki = wikipedia.summary(first_word, sentences=1)
         return sentence_wiki
 
     def wiki_link(self, first_word):
+        """ Get link from wikipedia"""
         wikipedia.set_lang('fr')
         link_wiki_api = wikipedia.page(first_word).url
         link_wiki = """<a href='{0}' target='_blank'>Si tu veux en savoir plus</a>""".format(link_wiki_api)

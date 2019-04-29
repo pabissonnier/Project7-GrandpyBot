@@ -18,6 +18,7 @@ class Parssing:
             return filtered_sentence
 
     def wiki_firstword(self, filtered_sentence):
+        """ Get first word of research for wikipedia """
         words_list = filtered_sentence.split('+')
         first_word = words_list[0]
         return first_word

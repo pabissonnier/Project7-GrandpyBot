@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f374dd2-fef3-40a2-96a3-7a053da395f2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/for_me.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/extraction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parssing.py" beforeDir="false" afterPath="$PROJECT_DIR$/parssing.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +58,7 @@
           <entry key="html" value="6424" />
           <entry key="js" value="907" />
           <entry key="json" value="317" />
-          <entry key="py" value="14126" />
+          <entry key="py" value="14386" />
           <entry key="txt" value="43" />
         </counts>
       </usages-collector>
@@ -72,7 +69,7 @@
           <entry key="JSON" value="317" />
           <entry key="JavaScript" value="907" />
           <entry key="PLAIN_TEXT" value="81" />
-          <entry key="Python" value="14126" />
+          <entry key="Python" value="14386" />
         </counts>
       </usages-collector>
     </session>
@@ -82,7 +79,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
+            <state relative-caret-position="909">
               <caret line="82" column="52" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
@@ -116,30 +113,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extraction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+            <state relative-caret-position="221">
+              <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
               <folding>
                 <element signature="e#24#45#0" expanded="true" />
-                <marker date="1556525461523" expanded="true" signature="94:95" ph="..." />
-                <marker date="1556525461523" expanded="true" signature="160:179" ph="..." />
-                <marker date="1556525461523" expanded="true" signature="1037:1046" ph="..." />
-                <marker date="1556525461523" expanded="true" signature="1293:1302" ph="..." />
-                <marker date="1556525461523" expanded="true" signature="1475:1484" ph="..." />
-                <marker date="1556525461523" expanded="true" signature="1806:1815" ph="..." />
+                <marker date="1556543299895" expanded="true" signature="94:95" ph="..." />
+                <marker date="1556543299895" expanded="true" signature="160:179" ph="..." />
+                <marker date="1556543299895" expanded="true" signature="1071:1080" ph="..." />
+                <marker date="1556543299895" expanded="true" signature="1364:1373" ph="..." />
+                <marker date="1556543299895" expanded="true" signature="1584:1593" ph="..." />
+                <marker date="1556543299895" expanded="true" signature="2003:2012" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parssing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+            <state relative-caret-position="347">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
-                <marker date="1556006920644" expanded="true" signature="53:54" ph="..." />
-                <marker date="1556006920644" expanded="true" signature="53:496" ph="..." />
-                <marker date="1556006920644" expanded="true" signature="135:144" ph="..." />
+                <marker date="1556543332526" expanded="true" signature="53:54" ph="..." />
+                <marker date="1556543332526" expanded="true" signature="53:496" ph="..." />
+                <marker date="1556543332526" expanded="true" signature="135:144" ph="..." />
               </folding>
             </state>
           </provider>
@@ -173,10 +170,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="2862">
               <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
             </state>
           </provider>
@@ -244,18 +241,18 @@
         <option value="$PROJECT_DIR$/tests/googleapi_data.json" />
         <option value="$PROJECT_DIR$/sentences_list.py" />
         <option value="$PROJECT_DIR$/display.py" />
-        <option value="$PROJECT_DIR$/parssing.py" />
         <option value="$PROJECT_DIR$/tests/google_api_datas.py" />
         <option value="$PROJECT_DIR$/tests/test_extraction.py" />
         <option value="$PROJECT_DIR$/tests/test_parssing.py" />
         <option value="$PROJECT_DIR$/tests/test_app.py" />
         <option value="$PROJECT_DIR$/for_me.py" />
-        <option value="$PROJECT_DIR$/extraction.py" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/extraction.py" />
+        <option value="$PROJECT_DIR$/parssing.py" />
       </list>
     </option>
   </component>
@@ -608,37 +605,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parssing.py">
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-          <folding>
-            <marker date="1556006920644" expanded="true" signature="53:54" ph="..." />
-            <marker date="1556006920644" expanded="true" signature="53:496" ph="..." />
-            <marker date="1556006920644" expanded="true" signature="135:144" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extraction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
-          <folding>
-            <element signature="e#24#45#0" expanded="true" />
-            <marker date="1556525461523" expanded="true" signature="94:95" ph="..." />
-            <marker date="1556525461523" expanded="true" signature="160:179" ph="..." />
-            <marker date="1556525461523" expanded="true" signature="1037:1046" ph="..." />
-            <marker date="1556525461523" expanded="true" signature="1293:1302" ph="..." />
-            <marker date="1556525461523" expanded="true" signature="1475:1484" ph="..." />
-            <marker date="1556525461523" expanded="true" signature="1806:1815" ph="..." />
-          </folding>
+        <state relative-caret-position="2862">
+          <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
+        <state relative-caret-position="909">
           <caret line="82" column="52" selection-start-line="82" selection-start-column="52" selection-end-line="82" selection-end-column="52" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
@@ -650,10 +626,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/extraction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="165" lean-forward="true" selection-start-line="165" selection-end-line="165" />
+        <state relative-caret-position="221">
+          <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+          <folding>
+            <element signature="e#24#45#0" expanded="true" />
+            <marker date="1556543299895" expanded="true" signature="94:95" ph="..." />
+            <marker date="1556543299895" expanded="true" signature="160:179" ph="..." />
+            <marker date="1556543299895" expanded="true" signature="1071:1080" ph="..." />
+            <marker date="1556543299895" expanded="true" signature="1364:1373" ph="..." />
+            <marker date="1556543299895" expanded="true" signature="1584:1593" ph="..." />
+            <marker date="1556543299895" expanded="true" signature="2003:2012" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parssing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <marker date="1556543332526" expanded="true" signature="53:54" ph="..." />
+            <marker date="1556543332526" expanded="true" signature="53:496" ph="..." />
+            <marker date="1556543332526" expanded="true" signature="135:144" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
