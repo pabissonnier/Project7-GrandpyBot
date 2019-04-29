@@ -38,7 +38,7 @@ def address():
         address_sentence = random_sentence+address_location
         return jsonify(result=address_sentence)
     except (ValueError, TypeError):
-        return jsonify(result="Mince, je ne trouve pas, essaye une autre adresse :)")
+        return jsonify(result="Mince, je ne trouve pas :)")
 
 
 @app.route('/_map')
@@ -81,9 +81,9 @@ def wikilink():
         link_wiki = Extraction.wiki_link(datas_extraction, first_word)
         return jsonify(result=link_wiki)
     except wikipedia.exceptions.DisambiguationError:
-        pass
+        return jsonify(result="Ou faire une nouvelle recherche...")
     except wikipedia.exceptions.PageError:
-        pass
+        return jsonify(result="Essaie autre chose...")
 
 
 if __name__ == '__main__':
