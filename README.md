@@ -28,6 +28,7 @@ Un texte de présentation du lieu s'affiche via l'API Wikipedia ainsi que le lie
 - WIKIPEDIA API
 - BOOTSTRAP
 - JQUERY
+- PYTHON 3
 
 ## DEPLOIEMENT
 Sur serveur GUNICORN via la plateforme Heroku.
