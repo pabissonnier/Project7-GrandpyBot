@@ -4,268 +4,713 @@
   url("../font/DoctorJekyllNF.ttf");
 }
 
-header{
-  background-image: url(../images/wallpaper.jpg);
-  height: 130px;
-  padding-top: 5px;
-  box-shadow: 0px 1px 5px #516B52;
-  position: static;
+/* For mobile display */
+@media only screen and (max-width: 425px) {
+  header{
+      background-image: url(../images/wallpaper.jpg);
+      height: 130px;
+      padding-top: 5px;
+      box-shadow: 0px 1px 5px #516B52;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    [class*="col-"] {
+      border: 2px;
+      border-radius: 6px;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    .row {
+      margin-right: -5px;
+      margin-left: -5px;
+    }
+
+    .container-fluid{
+      width: 100%;
+     }
+
+    .middlebloc{
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-top: 60px;
+      padding-bottom: 20px;
+      scroll-behaviour : auto;
+    }
+
+    h3{
+      font-family : "Doctor Jekyll NF";
+      padding-bottom : 15px;
+      font-size: 25px;
+    }
+
+    #quest{
+      width: 60%;
+      border-radius : 14px;
+      border: 2px solid #556451;
+      margin-right: 10px;
+    }
+
+    #button_valid{
+      background-color: #E1E1C7;
+      border-radius : 50px;
+      border: 3px solid #556451;
+      color : black;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
+    #button_valid:hover{
+      background-color: #556451;
+      border-radius : 20px;
+      border: 3px solid #E1E1C7;
+      color : white;
+      text-align: center;
+    }
+
+    .question_bloc{
+      padding-top: 130px;
+      padding-left: 40px;
+    }
+    .name{
+      padding-top: 30px;
+    }
+
+    .baseline{
+      padding-top: 45px;
+    }
+
+    .form-group{
+      padding-left: 80px;
+    }
+
+    #answer_bloc{
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 30px;
+    }
+
+    #result{
+      background: #E1E1C7;
+      border-radius: 5px 0px 5px 5px;
+      float: right;
+      color: #000;
+      clear: both;
+      line-height: 18px;
+      font-size: 15px;
+      padding: 8px;
+      padding-right: 50px;
+      position: relative;
+      margin: 8px 0;
+      max-width: 85%;
+      word-wrap: break-word;
+      z-index: -1;
+      box-shadow: -1px 1px 5px #516B52;
+    }
+
+    #result:after{
+      border-width: 0px 0 10px 10px;
+      border-color: transparent transparent transparent #E1E1C7;
+      top: 0;
+      right: -10px;
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+
+    #result:empty{
+      display: none;
+    }
+
+    #address{
+      background: #E1E1C7;
+      border-radius: 0px 5px 5px 5px;
+      float: left;
+      color: #000;
+      clear: both;
+      line-height: 18px;
+      font-size: 15px;
+      padding: 8px;
+      padding-right: 50px;
+      position: relative;
+      margin: 8px 0;
+      max-width: 85%;
+      word-wrap: break-word;
+      z-index: -1;
+      box-shadow: 1px 1px 5px #516B52;
+    }
+
+    #map{
+        max-width: 70%;
+
+    }
+
+    #address:after{
+      border-width: 0px 10px 10px 0;
+      border-color: transparent #E1E1C7 transparent transparent;
+      top: 0;
+      left: -10px;
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    #address:empty{
+      display: none;
+    }
+
+
+    #wiki{
+      background: #E1E1C7;
+      border-radius: 0px 5px 5px 5px;
+      float: left;
+      color: #000;
+      clear: both;
+      line-height: 18px;
+      font-size: 15px;
+      padding: 8px;
+      position: relative;
+      margin: 8px 0;
+      max-width: 85%;
+      word-wrap: break-word;
+      z-index: -1;
+      box-shadow: 1px 1px 5px #516B52;
+
+    }
+
+    #wiki:after{
+      border-width: 0px 10px 10px 0;
+      border-color: transparent #E1E1C7 transparent transparent;
+      top: 0;
+      left: -10px;
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+
+    #wiki:empty{
+      display: none;
+    }
+
+    #wikilink{
+      background: #E1E1C7;
+      border-radius: 0px 5px 5px 5px;
+      float: left;
+      color: #000;
+      clear: both;
+      line-height: 18px;
+      font-size: 15px;
+      padding: 8px;
+      margin: 8px 0;
+      max-width: 85%;
+      word-wrap: break-word;
+      z-index: -1;
+      box-shadow: 1px 1px 5px #516B52;
+    }
+
+    #wikilink:after{
+      border-width: 0px 10px 10px 0;
+      border-color: transparent #E1E1C7 transparent transparent;
+      top: 10px;
+      left: 5px;
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    #wikilink:empty{
+      display: none;
+    }
+
+    footer{
+      visibility: hidden;
+    }
 }
 
-[class*="col-"] {
-  border: 2px;
-  border-radius: 6px;
-  line-height: 40px;
-  text-align: center;
+/* For tablet display */
+@media only screen and (min-width: 426px) and (max-width: 768px){
+  header{
+      background-image: url(../images/wallpaper.jpg);
+      height: 130px;
+      padding-top: 5px;
+      box-shadow: 0px 1px 5px #516B52;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      z-index: 1;
+    }
+
+    [class*="col-"] {
+      border: 2px;
+      border-radius: 6px;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    .row {
+      margin-right: -5px;
+      margin-left: -5px;
+    }
+
+    .container-fluid{
+      width: 100%;
+     }
+
+    .middlebloc{
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-top: 60px;
+      padding-bottom: 20px;
+      scroll-behaviour : auto;
+    }
+
+    h3{
+      font-family : "Doctor Jekyll NF";
+      padding-bottom : 15px;
+      font-size: 25px;
+    }
+
+    #quest{
+      width: 60%;
+      border-radius : 14px;
+      border: 2px solid #556451;
+      margin-right: 10px;
+    }
+
+    #button_valid{
+      background-color: #E1E1C7;
+      border-radius : 50px;
+      border: 3px solid #556451;
+      color : black;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
+    #button_valid:hover{
+      background-color: #556451;
+      border-radius : 20px;
+      border: 3px solid #E1E1C7;
+      color : white;
+      text-align: center;
+    }
+
+    .question_bloc{
+      padding-top: 130px;
+      padding-left: 40px;
+    }
+    .name{
+      padding-top: 30px;
+    }
+
+    .baseline{
+      padding-top: 45px;
+    }
+
+    .form-group{
+      padding-left: 80px;
+    }
+
+    #answer_bloc{
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 30px;
+    }
+
+    #result{
+      background: #E1E1C7;
+      border-radius: 5px 0px 5px 5px;
+      float: right;
+      color: #000;
+      clear: both;
+      line-height: 18px;
+      font-size: 15px;
+      padding: 8px;
+      padding-right: 50px;
+      position: relative;
+      margin: 8px 0;
+      max-width: 85%;
+      word-wrap: break-word;
+      z-index: -1;
+      box-shadow: -1px 1px 5px #516B52;
+    }
+
+    #result:after{
+      border-width: 0px 0 10px 10px;
+      border-color: transparent transparent transparent #E1E1C7;
+      top: 0;
+      right: -10px;
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+
+    #result:empty{
+      display: none;
+    }
+
+    #address{
+      background: #E1E1C7;
+      border-radius: 0px 5px 5px 5px;
+      float: left;
+      color: #000;
+      clear: both;
+      line-height: 18px;
+      font-size: 15px;
+      padding: 8px;
+      padding-right: 50px;
+      position: relative;
+      margin: 8px 0;
+      max-width: 85%;
+      word-wrap: break-word;
+      z-index: -1;
+      box-shadow: 1px 1px 5px #516B52;
+    }
+
+    #map{
+        max-width: 70%;
+
+    }
+
+    #address:after{
+      border-width: 0px 10px 10px 0;
+      border-color: transparent #E1E1C7 transparent transparent;
+      top: 0;
+      left: -10px;
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    #address:empty{
+      display: none;
+    }
+
+
+    #wiki{
+      background: #E1E1C7;
+      border-radius: 0px 5px 5px 5px;
+      float: left;
+      color: #000;
+      clear: both;
+      line-height: 18px;
+      font-size: 15px;
+      padding: 8px;
+      position: relative;
+      margin: 8px 0;
+      max-width: 85%;
+      word-wrap: break-word;
+      z-index: -1;
+      box-shadow: 1px 1px 5px #516B52;
+
+    }
+
+    #wiki:after{
+      border-width: 0px 10px 10px 0;
+      border-color: transparent #E1E1C7 transparent transparent;
+      top: 0;
+      left: -10px;
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+
+    #wiki:empty{
+      display: none;
+    }
+
+    #wikilink{
+      background: #E1E1C7;
+      border-radius: 0px 5px 5px 5px;
+      float: left;
+      color: #000;
+      clear: both;
+      line-height: 18px;
+      font-size: 15px;
+      padding: 8px;
+      margin: 8px 0;
+      max-width: 85%;
+      word-wrap: break-word;
+      z-index: -1;
+      box-shadow: 1px 1px 5px #516B52;
+    }
+
+    #wikilink:after{
+      border-width: 0px 10px 10px 0;
+      border-color: transparent #E1E1C7 transparent transparent;
+      top: 10px;
+      left: 5px;
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    #wikilink:empty{
+      display: none;
+    }
+
+    footer{
+      visibility: hidden;
+    }
 }
 
-.row {
-  margin-right: -15px;
-  margin-left: -15px;
-}
+/* For laptop and desktop display */
+@media only screen and (min-width: 769px){
+    header{
+      background-image: url(../images/wallpaper.jpg);
+      height: 130px;
+      padding-top: 5px;
+      box-shadow: 0px 1px 5px #516B52;
+      position: static;
+    }
 
-.container-fluid{
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-left: auto;
-  margin-right: auto;
- }
+    [class*="col-"] {
+      border: 2px;
+      border-radius: 6px;
+      line-height: 40px;
+      text-align: center;
+    }
 
-@media (max-width: 768px) {
-  .container {
-    width: 750px;
-  }
-  footer{
-    height: 20px;
-  }
-}
+    .row {
+      margin-right: -15px;
+      margin-left: -15px;
+    }
 
-@media (max-width: 992px) {
-  .container {
-    width: 970px;
-  }
-  footer{
-    visibility: hidden;
-  }
-}
+    .container-fluid{
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-left: auto;
+      margin-right: auto;
+     }
 
-@media (max-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
+    .middlebloc{
+      padding-right: 100px;
+      padding-left: 20px;
+      padding-bottom: 200px;
+      scroll-behaviour : auto;
+    }
 
-a{
-    pointer-events: auto;
-    cursor: pointer;
-}
+    h3{
+      font-family : "Doctor Jekyll NF";
+      padding-bottom : 15px;
+    }
 
-.middlebloc{
-  padding-right: 100px;
-  padding-left: 20px;
-  padding-bottom: 200px;
-  scroll-behaviour : auto;
-}
+    #quest{
+      width: 60%;
+      padding-left : 20px;
+      border-radius : 14px;
+      border: 2px solid #556451;
+      margin-right: 10px;
+    }
 
-h3{
-  font-family : "Doctor Jekyll NF";
-  padding-bottom : 15px;
-}
+    #button_valid{
+      width: 15%;
+      background-color: #E1E1C7;
+      border-radius : 50px;
+      border: 3px solid #556451;
+      color : black;
+      padding-bottom: 5px;
+      text-align: center;
+    }
 
-#quest{
-  width: 60%;
-  padding-left : 20px;
-  border-radius : 14px;
-  border: 2px solid #556451;
-  margin-right: 10px;
-}
+    #button_valid:hover{
+      background-color: #556451;
+      border-radius : 20px;
+      border: 3px solid #E1E1C7;
+      color : white;
+      text-align: center;
+    }
 
-#button_valid{
-  width: 15%;
-  background-color: #E1E1C7;
-  border-radius : 50px;
-  border: 3px solid #556451;
-  color : black;
-  padding-bottom: 5px;
-  text-align: center;
-}
+    .question_bloc{
+      padding-top: 130px;
+      padding-left: 40px;
+    }
+    .name{
+      padding-top: 30px;
+    }
 
-#button_valid:hover{
-  background-color: #556451;
-  border-radius : 20px;
-  border: 3px solid #E1E1C7;
-  color : white;
-  text-align: center;
-}
+    .baseline{
+      padding-top: 45px;
+    }
 
+    .form-group{
+      padding-left: 80px;
+    }
 
-.question_bloc{
-  padding-top: 130px;
-  padding-left: 40px;
-}
+    #answer_bloc{
+      padding-left: 200px;
+      padding-right: 200px;
+      padding-top: 30px;
+    }
 
+    #result{
+      background: #E1E1C7;
+      border-radius: 5px 0px 5px 5px;
+      float: right;
+      color: #000;
+      clear: both;
+      line-height: 18px;
+      font-size: 15px;
+      padding: 8px;
+      padding-right: 50px;
+      position: relative;
+      margin: 8px 0;
+      max-width: 85%;
+      word-wrap: break-word;
+      z-index: -1;
+      box-shadow: -1px 1px 5px #516B52;
+    }
 
-.name{
-  padding-top: 30px;
-}
-
-.baseline{
-  padding-top: 45px;
-}
-
-.form-group{
-  padding-left: 80px;
-}
-
-#answer_bloc{
-  padding-left: 200px;
-  padding-right: 200px;
-  padding-top: 30px;
-}
-
-#result{
-  background: #E1E1C7;
-  border-radius: 5px 0px 5px 5px;
-  float: right;
-  color: #000;
-  clear: both;
-  line-height: 18px;
-  font-size: 15px;
-  padding: 8px;
-  padding-right: 50px;
-  position: relative;
-  margin: 8px 0;
-  max-width: 85%;
-  word-wrap: break-word;
-  z-index: -1;
-  box-shadow: -1px 1px 5px #516B52;
-}
-
-#result:after{
-  border-width: 0px 0 10px 10px;
-  border-color: transparent transparent transparent #E1E1C7;
-  top: 0;
-  right: -10px;
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
+    #result:after{
+      border-width: 0px 0 10px 10px;
+      border-color: transparent transparent transparent #E1E1C7;
+      top: 0;
+      right: -10px;
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
 
 
-#result:empty{
-  display: none;
-}
+    #result:empty{
+      display: none;
+    }
 
-#address{
-  background: #E1E1C7;
-  border-radius: 0px 5px 5px 5px;
-  float: left;
-  color: #000;
-  clear: both;
-  line-height: 18px;
-  font-size: 15px;
-  padding: 8px;
-  padding-right: 50px;
-  position: relative;
-  margin: 8px 0;
-  max-width: 85%;
-  word-wrap: break-word;
-  z-index: -1;
-  box-shadow: 1px 1px 5px #516B52;
-}
+    #address{
+      background: #E1E1C7;
+      border-radius: 0px 5px 5px 5px;
+      float: left;
+      color: #000;
+      clear: both;
+      line-height: 18px;
+      font-size: 15px;
+      padding: 8px;
+      padding-right: 50px;
+      position: relative;
+      margin: 8px 0;
+      max-width: 85%;
+      word-wrap: break-word;
+      z-index: -1;
+      box-shadow: 1px 1px 5px #516B52;
+    }
 
-#address:after{
-  border-width: 0px 10px 10px 0;
-  border-color: transparent #E1E1C7 transparent transparent;
-  top: 0;
-  left: -10px;
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
+    #address:after{
+      border-width: 0px 10px 10px 0;
+      border-color: transparent #E1E1C7 transparent transparent;
+      top: 0;
+      left: -10px;
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
 
-#address:empty{
-  display: none;
-}
-
-
-#wiki{
-  background: #E1E1C7;
-  border-radius: 0px 5px 5px 5px;
-  float: left;
-  color: #000;
-  clear: both;
-  line-height: 18px;
-  font-size: 15px;
-  padding: 8px;
-  position: relative;
-  margin: 8px 0;
-  max-width: 85%;
-  word-wrap: break-word;
-  z-index: -1;
-  box-shadow: 1px 1px 5px #516B52;
-
-}
-
-#wiki:after{
-  border-width: 0px 10px 10px 0;
-  border-color: transparent #E1E1C7 transparent transparent;
-  top: 0;
-  left: -10px;
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
+    #address:empty{
+      display: none;
+    }
 
 
-#wiki:empty{
-  display: none;
-}
+    #wiki{
+      background: #E1E1C7;
+      border-radius: 0px 5px 5px 5px;
+      float: left;
+      color: #000;
+      clear: both;
+      line-height: 18px;
+      font-size: 15px;
+      padding: 8px;
+      position: relative;
+      margin: 8px 0;
+      max-width: 85%;
+      word-wrap: break-word;
+      z-index: -1;
+      box-shadow: 1px 1px 5px #516B52;
 
-#wikilink{
-  background: #E1E1C7;
-  border-radius: 0px 5px 5px 5px;
-  float: left;
-  color: #000;
-  clear: both;
-  line-height: 18px;
-  font-size: 15px;
-  padding: 8px;
-  margin: 8px 0;
-  max-width: 85%;
-  word-wrap: break-word;
-  z-index: -1;
-  box-shadow: 1px 1px 5px #516B52;
-}
+    }
 
-#wikilink:after{
-  border-width: 0px 10px 10px 0;
-  border-color: transparent #E1E1C7 transparent transparent;
-  top: 10px;
-  left: 5px;
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
+    #wiki:after{
+      border-width: 0px 10px 10px 0;
+      border-color: transparent #E1E1C7 transparent transparent;
+      top: 0;
+      left: -10px;
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
 
 
-#wikilink:empty{
-  display: none;
-}
+    #wiki:empty{
+      display: none;
+    }
 
-footer{
-  padding-top: 15px;
-  background-color: #556451;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  color : white;
+    #wikilink{
+      background: #E1E1C7;
+      border-radius: 0px 5px 5px 5px;
+      float: left;
+      color: #000;
+      clear: both;
+      line-height: 18px;
+      font-size: 15px;
+      padding: 8px;
+      margin: 8px 0;
+      max-width: 85%;
+      word-wrap: break-word;
+      z-index: -1;
+      box-shadow: 1px 1px 5px #516B52;
+    }
+
+    #wikilink:after{
+      border-width: 0px 10px 10px 0;
+      border-color: transparent #E1E1C7 transparent transparent;
+      top: 10px;
+      left: 5px;
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+
+    #wikilink:empty{
+      display: none;
+    }
+
+    footer{
+      padding-top: 15px;
+      background-color: #556451;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      color : white;
+    }
 }
